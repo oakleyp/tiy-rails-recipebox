@@ -1,0 +1,103 @@
+// Place all the styles related to the Recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.recipes-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-box {
+  border: 1px solid #777;
+  border-radius: 10px;
+  background: #aaa;
+  margin-bottom: 2vh;
+  list-style-type: none;
+  width: 90%;
+  padding: 2%;
+}
+
+.recipe-box .body-container {
+  display: flex;
+}
+
+.recipe-box .imgbox {
+  overflow: hidden;
+  margin-bottom: 5px;
+  height: 80%;
+  width: 80%;
+}
+
+.imgbox img {
+  height: auto;
+  width: 30%
+
+}
+
+.recipe-box .beside-img {
+  margin-top: -1%;
+}
+
+.recipe-box .bottom-container {
+
+}
+
+.body-container .title {
+
+}
+
+.body-container .desc {
+
+}
+
+.footer {
+
+}
+
+.footer span:nth-of-type(2) {
+  margin-right: 49%;
+
+}
+
+/* Recipes#Show Styles */
+
+#show-container h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+#show-container h2 {
+  text-align: center;
+}
+
+.show-imgbox img {
+  margin-top: 3vh;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  max-height: 90%;
+  width: 90%;
+}
+
+.main-content {
+  display: flex;
+}
+
+.main-content .col1 {
+  width: 30%;
+}
+
+.main-content .col2 {
+  width: 70%;
+}
+
+/* Recipes#Edit styles */
+
+#edit-container {
+  margin: 0 3vw;
+}
+
+/* Recipes#New styles */
+
+#new-container {
+  margin: 0 3vw;
+}

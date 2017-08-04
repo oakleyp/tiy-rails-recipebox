@@ -1,0 +1,30 @@
+<p id="notice">
+  <%= notice %>
+</p>
+
+<ul class="recipes-list">
+  <% @recipes.each do |recipe| %>
+    <li class="recipe-box">
+      <div class="body-container">
+        <div class="imgbox">
+          <%= image_tag recipe.img_attachment.url(:medium) if !recipe.img_attachment.nil? %>
+        </div>
+        <div class="beside-img">
+          <h2 class="title">
+            <%= link_to(recipe.title.to_s, recipe_path(recipe)) %>
+          </h2>
+          <p class="desc">
+            <%= recipe.description %>
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <span><strong>Cook time:</strong> <%= recipe.cooktime %></span> |
+        <span><strong>Prep time:</strong> <%= recipe.preptime %></span>
+        <span><%= link_to 'Edit', edit_recipe_path(recipe) %></span> |
+        <span><%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure you want to delete this recipe?'} %></span>
+      </div>
+
+    </li>
+    <% end %>
+</ul>

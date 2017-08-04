@@ -1,0 +1,63 @@
+<p id="notice">
+  <%= notice %>
+</p>
+
+<section id="show-container">
+  <h1>
+    <%= @recipe.title %>
+  </h1>
+
+  <h2>
+    <strong>Author:</strong>
+    <%= @recipe.author %>
+  </h2>
+
+  <div class="main-content">
+    <div class="col1">
+      <div class="show-imgbox">
+        <%= image_tag @recipe.img_attachment.url if !@recipe.img_attachment.nil? %>
+      </div>
+    </div>
+
+    <div class="col2">
+      <p>
+        <strong>Description:</strong>
+        <%= @recipe.description %>
+      </p>
+
+      <p>
+        <strong>Steps:</strong>
+        <%= @recipe.steps %>
+      </p>
+
+      <p>
+        <strong>Preparation time:</strong>
+        <%= @recipe.preptime %>
+      </p>
+
+      <p>
+        <strong>Cook time:</strong>
+        <%= @recipe.cooktime %>
+      </p>
+
+      <p>
+        <strong>Servings:</strong>
+        <%= @recipe.servings %>
+      </p>
+
+      <p>
+        <strong>Calories:</strong>
+        <%= @recipe.calories %>
+      </p>
+
+      <p>
+        <strong>Source:</strong>
+        <%= @recipe.source %>
+      </p>
+
+      <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+        <%= link_to 'Back', recipes_path %>
+    </div>
+  </div>
+
+</section>

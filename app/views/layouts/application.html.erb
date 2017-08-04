@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RecipeBox</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+    <nav>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'New Recipe', new_recipe_path %>&nbsp;|</li>
+        <li>&nbsp;<%= link_to 'Recipes by Ingredients', search_path %></li>
+      </ul>
+    </nav>
+  </header>
+    <section id="content">
+      <%= yield %>
+    </section>
+  </body>
+</html>
